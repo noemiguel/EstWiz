@@ -1,6 +1,6 @@
 *.pyc
 __pycache__/
 *.json
-manage.py
+settings.py
 .idea/
 migrations/
