@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block bid_list %}
+<div class="large-offset-3 large-6 columns">
+        {% for bid in bids %}
+            <h4><a href="/bid/get/{{ bid.id }}/">{{ bid.bid_subject }}</a></h4>
+        {% endfor %}
+</div>
+
+{% endblock %}

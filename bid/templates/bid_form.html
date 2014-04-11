@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block bid_form %}
+<div>
+        {% if username %}
+        <form action="/bid/form_submit/" method="post">
+            {% csrf_token %}
+            <label for="bidsubject">Тема заявки</label>
+            <input type="text" style="width: 670px; height: 34px;"name="bidsubject" id="bidsubject">
+            <label for="bidbody">Текст заявки</label>
+            <textarea name="bidbody" style="width: 670px; height: 400px;" id="bidbody"></textarea>
+            <input class="button" type="submit" value="Отправить">
+        </form>
+        {% else %}
+            <h3>Вы не вошли</h3>
+        {% endif %}
+</div>
+
+{% endblock %}
